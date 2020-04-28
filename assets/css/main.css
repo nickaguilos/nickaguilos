@@ -1,0 +1,57 @@
+/* 
+
+
+	New grid framework based on CSS Grid  
+	Started July 3, 2019 
+
+	Premise of this css grid utility is to create a grid framework that would supplant the current float based grid framework in use since 2013.
+
+	This grid framework should be as lightweight as possible and should cover all layout formats, current and future, full width and static width, desktop and mobile.
+
+	- AutoDeal Interface Design Team
+
+
+*/
+@media screen and (min-width: 700px) {
+  .container {
+    min-width: 1080px; } }
+
+.container, .inner-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  .container.layout-1, .inner-grid.layout-1 {
+    grid-auto-flow: row; }
+    .container.layout-1 #site-header, .container.layout-1 #site-footer, .container.layout-1 main, .inner-grid.layout-1 #site-header, .inner-grid.layout-1 #site-footer, .inner-grid.layout-1 main {
+      grid-column-start: 1;
+      grid-column-end: 13;
+      max-width: 100vw; }
+  .container .width-limiter, .inner-grid .width-limiter {
+    width: 1200px;
+    margin: 0 auto; }
+  .container.layout-2, .inner-grid.layout-2 {
+    grid-column-gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .container.layout-2 .inner-grid, .inner-grid.layout-2 .inner-grid {
+      grid-gap: 2em; }
+    .container.layout-2 #site-content, .inner-grid.layout-2 #site-content {
+      grid-column: 3 / span 9; }
+      .container.layout-2 #site-content .author, .inner-grid.layout-2 #site-content .author {
+        display: grid;
+        grid-template-columns: 150px 1fr; }
+    .container.layout-2 #side-bar, .inner-grid.layout-2 #side-bar {
+      grid-column: 1 / span 3; }
+  .container.layout-3 .width-limiter, .inner-grid.layout-3 .width-limiter {
+    width: 1200px;
+    margin: 0 auto; }
+  .container.layout-3 #site-header, .inner-grid.layout-3 #site-header {
+    grid-column: 1 / span 12; }
+  .container.layout-3 #side-bar, .inner-grid.layout-3 #side-bar {
+    grid-area: sidebar; }
+  .container.layout-3 #site-content, .inner-grid.layout-3 #site-content {
+    grid-area: sitecontent; }
+  .container.layout-3 main, .inner-grid.layout-3 main {
+    grid-template-columns: 300px minmax(0, 1fr);
+    grid-template-areas: "sidebar sitecontent"; }
+
+/*# sourceMappingURL=main.css.map */
