@@ -1,3 +1,32 @@
+a {
+  color: #333;
+  text-decoration: none; }
+
+body {
+  font-size: 16px;
+  font-family: sans-serif; }
+
+#side-bar {
+  position: fixed;
+  top: 0;
+  padding-top: 6.6em; }
+  #side-bar #brand {
+    display: block;
+    margin-bottom: 3em; }
+
+#site-content {
+  padding-top: 6.6em; }
+
+.button {
+  padding: 0.5em 1em;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold; }
+  .button:hover {
+    border-color: #777;
+    color: #777; }
+
 /* 
 
 
@@ -53,5 +82,13 @@
   .container.layout-3 main, .inner-grid.layout-3 main {
     grid-template-columns: 300px minmax(0, 1fr);
     grid-template-areas: "sidebar sitecontent"; }
+
+.blog-roll {
+  padding-left: 0; }
+  .blog-roll li {
+    list-style-type: none;
+    margin-bottom: 4em; }
+  .blog-roll h2 {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,1 +1,14 @@
 @import 'utilities/grid';
+
+.blog-roll {
+	padding-left: 0;
+
+	li {
+		list-style-type: none;
+		margin-bottom: 4em;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+}
